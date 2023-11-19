@@ -1,0 +1,166 @@
+[
+      {
+        "_id": "A101",
+        "title": "CS Fundamentals Quiz",
+        "course": "CS5001",
+        "deadline": "2023-10-15",
+        "points": 50,
+        "description": "Test your fundamental CS knowledge with this quiz.",
+        "type": "Quiz"
+      },
+      {
+        "_id": "A102",
+        "title": "Programming Basics Assignment",
+        "course": "CS5001",
+        "deadline": "2023-10-22",
+        "points": 80,
+        "description": "Apply your programming skills to complete this assignment.",
+        "type": "Assignment"
+      },
+      {
+        "_id": "A103",
+        "title": "Data Structures Challenge",
+        "course": "CS5001",
+        "deadline": "2023-10-29",
+        "points": 100,
+        "description": "Take on the challenge of data structures in this assignment.",
+        "type": "Assignment"
+      },
+      {
+        "_id": "A104",
+        "title": "Midterm Exam",
+        "course": "CS5001",
+        "deadline": "2023-11-05",
+        "points": 150,
+        "description": "A comprehensive midterm exam to test your knowledge.",
+        "type": "Exam"
+      },
+      {
+        "_id": "A105",
+        "title": "Project 1: N-Queens Problem",
+        "course": "CS5001",
+        "deadline": "2023-11-15",
+        "points": 200,
+        "description": "Implement an algorithm to solve the N-Queens problem.",
+        "type": "Project"
+      },
+      {
+        "_id": "A201",
+        "title": "Algorithm Complexity Analysis",
+        "course": "CS5008",
+        "deadline": "2023-10-18",
+        "points": 60,
+        "description": "Analyze and assess the complexity of algorithms.",
+        "type": "Assignment"
+      },
+      {
+        "_id": "A202",
+        "title": "Linked Lists Implementation",
+        "course": "CS5008",
+        "deadline": "2023-10-25",
+        "points": 70,
+        "description": "Implement and work with linked lists in this assignment.",
+        "type": "Assignment"
+      },
+      {
+        "_id": "A203",
+        "title": "Sorting Algorithms Performance",
+        "course": "CS5008",
+        "deadline": "2023-11-01",
+        "points": 80,
+        "description": "Analyze the performance of sorting algorithms.",
+        "type": "Assignment"
+      },
+      {
+        "_id": "A204",
+        "title": "Midterm Exam",
+        "course": "CS5008",
+        "deadline": "2023-11-08",
+        "points": 150,
+        "description": "Test your knowledge with this midterm exam.",
+        "type": "Exam"
+      },
+      {
+        "_id": "A205",
+        "title": "Project 1: Heap Implementation",
+        "course": "CS5008",
+        "deadline": "2023-11-18",
+        "points": 200,
+        "description": "Implement and utilize a heap data structure.",
+        "type": "Project"
+      },
+      {
+        "_id": "A301",
+        "title": "HTML and CSS Website",
+        "course": "CS5610",
+        "deadline": "2023-10-14",
+        "points": 70,
+        "description": "Create a simple website using HTML and CSS.",
+        "type": "Assignment"
+      },
+      {
+        "_id": "A302",
+        "title": "JavaScript Interactive Features",
+        "course": "CS5610",
+        "deadline": "2023-10-21",
+        "points": 80,
+        "description": "Incorporate interactive features using JavaScript.",
+        "type": "Assignment"
+      },
+      {
+        "_id": "A303",
+        "title": "Responsive Web Design Project",
+        "course": "CS5610",
+        "deadline": "2023-10-28",
+        "points": 100,
+        "description": "Design a responsive web project.",
+        "type": "Project"
+      },
+      {
+        "_id": "A304",
+        "title": "Midterm Exam",
+        "course": "CS5610",
+        "deadline": "2023-11-04",
+        "points": 150,
+        "description": "A midterm exam to assess your knowledge.",
+        "type": "Exam"
+      },
+      {
+        "_id": "A305",
+        "title": "Project 1: Kanbas Duplicate",
+        "course": "CS5610",
+        "deadline": "2023-11-14",
+        "points": 200,
+        "description": "Create a duplicate of the Kanbas platform.",
+        "type": "Project"
+      },
+      {
+        "_id": "A401",
+        "title": "Proof by Mathematical Induction",
+        "course": "CS5002",
+        "deadline": "2023-10-16",
+        "points": 60,
+        "description": "Prove mathematical statements using induction.",
+        "type": "Assignment"
+      },
+      {
+        "_id": "A402",
+        "title": "Combinatorial Analysis Challenge",
+        "course": "CS5002",
+        "deadline": "2023-10-23",
+        "points": 70,
+        "description": "Take on the challenge of combinatorial analysis.",
+        "type": "Assignment"
+      },
+      {
+        "_id": "A403",
+        "title": "Probability Theory Assignment",
+        "course": "CS5002",
+        "deadline": "2023-10-30",
+        "points": 80,
+        "description": "Apply probability theory to solve problems.",
+        "type": "Assignment"
+        }
+
+    ]
+  

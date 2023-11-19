@@ -1,0 +1,117 @@
+[
+  {
+    "_id": "M101",
+    "name": "Foundations of Computer Science and Programming",
+    "description": "This course provides a solid foundation in computer science and programming. Students will begin with an introduction to Python programming, covering variables, data types, and control structures. Subsequently, they will delve into data structures, algorithms, and object-oriented programming principles. The course also explores different software development methodologies and introduces database management and SQL for data retrieval and manipulation.",
+    "course": "CS5001",
+    "lessons": [
+      {
+        "name": "Week 1: Introduction to Programming with Python",
+        "description": "Learn the basics of Python programming, including variables, data types, and control structures."
+      },
+      {
+        "name": "Week 2: Data Structures and Algorithms in Python",
+        "description": "Explore essential data structures and algorithms using Python."
+      },
+      {
+        "name": "Week 3: Object-Oriented Programming Principles",
+        "description": "Understanding the principles of object-oriented programming and design."
+      },
+      {
+        "name": "Week 4: Software Development Methodologies",
+        "description": "Discover different software development methodologies and their applications."
+      },
+      {
+        "name": "Week 5: Introduction to Databases",
+        "description": "Learn the basics of database management and SQL for data retrieval and manipulation."
+      }
+      
+    ]
+    },
+  {
+    "_id": "M102",
+    "name": "Data Structures and Algorithm Design",
+    "description": "In this course, students will gain an in-depth understanding of data structures and algorithm design. They will study advanced data structures such as trees, graphs, and hash tables, and learn to analyze algorithm efficiency, including time and space complexity. The curriculum covers dynamic programming and greedy algorithms for optimization problems, as well as various sorting and searching algorithms like quicksort and binary search. Additionally, students will explore graph algorithms and network flows.",
+    "course": "CS5008",
+    "lessons": [
+      {
+        "name": "Week 1: Advanced Data Structures",
+        "description": "Exploring advanced data structures such as trees, graphs, and hash tables."
+      },
+      {
+        "name": "Week 2: Algorithm Efficiency Analysis",
+        "description": "Analyze algorithm efficiency, including time and space complexity."
+      },
+      {
+        "name": "Week 3: Dynamic Programming and Greedy Algorithms",
+        "description": "Study dynamic programming and greedy algorithms for optimization problems."
+      },
+      {
+        "name": "Week 4: Sorting and Searching Algorithms",
+        "description": "Learn various sorting and searching algorithms, including quicksort and binary search."
+      },
+      {
+        "name": "Week 5: Graph Algorithms and Network Flows",
+        "description": "Understanding graph algorithms, network flows, and their applications."
+      }
+    ]
+    },
+  {
+    "_id": "M103",
+    "name": "Web Development and Design",
+    "description": "This course focuses on modern web application development and design principles. Students will start with front-end development, creating visually appealing web interfaces using HTML and CSS. They will explore JavaScript and popular front-end frameworks like React and Angular. The curriculum also includes back-end development with Node.js and Express, covering server-side applications. Students will learn about managing databases, including relational and NoSQL databases, and enhance web application security and performance for optimal user experiences.",
+    "course": "CS5610",
+    "lessons": [
+      {
+        "name": "Week 1: Front-End Development with HTML and CSS",
+        "description": "Designing responsive and visually appealing web interfaces using HTML and CSS."
+      },
+      {
+        "name": "Week 2: JavaScript and Front-End Frameworks",
+        "description": "Exploring JavaScript and popular front-end frameworks like React and Angular."
+      },
+      {
+        "name": "Week 3: Back-End Development with Node.js and Express",
+        "description": "Developing server-side applications with Node.js and Express framework."
+      },
+      {
+        "name": "Week 4: Relational and NoSQL Databases",
+        "description": "Managing databases, including relational and NoSQL databases for web applications."
+      },
+      {
+        "name": "Week 5: Web Application Security and Performance",
+        "description": "Enhancing web application security and optimizing performance for users."
+      }
+    ]
+    },
+    {
+      "_id": "M104",
+      "name": "Discrete Mathematics Fundamentals",
+      "description": "This course introduces students to the foundational concepts of discrete mathematics. Topics covered include set theory and logic, which encompass an introduction to set theory, propositional logic, and predicate logic. Students will study number theory, prime numbers, and divisibility, and explore combinatorial mathematics and counting principles. The course also includes an examination of graph theory, its various types, and practical applications. Additionally, students will gain an understanding of discrete structures, which include relations and functions.",
+      "course": "CS5002",
+      "lessons": [
+        {
+          "name": "Week 1: Set Theory and Logic",
+          "description": "Introduction to set theory, propositional logic, and predicate logic."
+        },
+        {
+          "name": "Week 2: Number Theory",
+          "description": "Study of number theory, prime numbers, and divisibility."
+        },
+        {
+          "name": "Week 3: Combinatorics",
+          "description": "Understanding combinatorial mathematics and counting principles."
+        },
+        {
+          "name": "Week 4: Graph Theory",
+          "description": "Exploration of graph theory, types of graphs, and applications."
+        },
+        {
+          "name": "Week 5: Discrete Structures",
+          "description": "Overview of discrete structures, including relations and functions."
+        }
+      ]
+    }
+
+    
+]

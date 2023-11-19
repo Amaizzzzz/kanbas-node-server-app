@@ -1,0 +1,43 @@
+[
+  {
+    "_id": "CS5001",
+    "name": "Intro to Computer Science",
+    "number": "16548",
+    "startDate": "2022/09/06",
+    "endDate": "2022/12/15",
+    "semester": "FA22",
+    "section": "03"
+  },
+
+  {
+    "_id": "CS5002",
+    "name": "Discrete Mathematics",
+    "number": "52549",
+    "startDate": "2022/09/06",
+    "endDate": "2022/12/15",
+    "semester": "FA22",
+    "section": "02"
+    
+  },
+
+  {
+    "_id": "CS5008",
+    "name": "Data Structures and Algorithms",
+    "number": "27904",
+    "startDate": "2023/01/10",
+    "endDate": "2023/05/15",
+    "semester": "SP23",
+    "section": "01"
+  },
+
+  {
+    "_id": "CS5610",
+    "name": "Web Development and Design",
+    "number": "97341",
+    "startDate": "2023/01/10",
+    "endDate": "2023/05/15",
+    "semester": "SP23",
+    "section": "01"
+    
+  }
+]
