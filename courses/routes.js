@@ -5,11 +5,13 @@ function CourseRoutes(app) {
     res.send(courses);
   });
   app.post("/api/courses", (req, res) => {
-    const course = { ...req.body,
-      _id: new Date().getTime().toString() };
-    Database.courses.push(course);
-    res.send(course);
-  });
+    const newCourse = {
+       ...req.body,
+       _id: new Date().getTime().toString(),
+    }
+      Database.courses.unshift(newCourse);
+      res.json(newCourse);
+    });
   app.delete("/api/courses/:id", (req, res) => {
     const { id } = req.params;
     Database.courses = Database.courses
