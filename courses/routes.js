@@ -8,7 +8,6 @@ function CourseRoutes(app) {
     const newCourse = {
        ...req.body,
        _id: new Date().getTime().toString(),
-       name: "zhangbaozi"
     }
       Database.courses.unshift(newCourse);
       res.json(newCourse);
