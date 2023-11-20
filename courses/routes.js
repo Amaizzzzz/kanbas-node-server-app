@@ -9,6 +9,8 @@ function CourseRoutes(app) {
        ...req.body,
        _id: new Date().getTime().toString(),
     }
+    console.log("newCourse: ", newCourse);
+    console.log("req.body: ", req.body);
       Database.courses.unshift(newCourse);
       res.json(newCourse);
     });

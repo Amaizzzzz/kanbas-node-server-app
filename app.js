@@ -22,9 +22,8 @@ app.use(cors({
     }
 }));
 
-
-CourseRoutes(app);
 app.use(express.json());
+CourseRoutes(app);
 ModuleRoutes(app);
 AssignmentRoutes(app);
 Lab5(app);
