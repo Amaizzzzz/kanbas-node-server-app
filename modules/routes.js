@@ -14,6 +14,7 @@ function ModuleRoutes(app) {
       course: cid,
       _id: new Date().getTime().toString(),
     };
+    
     db.modules.push(newModule);
     res.send(newModule);
   });
@@ -34,7 +35,7 @@ function ModuleRoutes(app) {
     };
     res.sendStatus(204);
   });
-
+  
 
 
 }

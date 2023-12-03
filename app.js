@@ -9,7 +9,7 @@ import "dotenv/config";
 
 
 const app = express();
-const allowedOrigins = ['http://localhost:3000', 'https://a5--aesthetic-smakager-441fa4.netlify.app'];
+const allowedOrigins = ['http://localhost:3000','https://a5--aesthetic-smakager-441fa4.netlify.app'];
 
 app.use(cors({
     credentials: true,
@@ -28,4 +28,4 @@ ModuleRoutes(app);
 AssignmentRoutes(app);
 Lab5(app);
 Hello(app);
-app.listen(process.env.PORT ||8000);
+app.listen(4000);
