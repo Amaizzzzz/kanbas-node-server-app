@@ -48,12 +48,12 @@ function UserRoutes(app) {
     req.session["currentUser"] = currentUser;
     res.json(status);
   };
-  const updateFirstName = async (req, res) => {
-    const id = req.params.id;
-    const newFirstName = req.params.newFirstName;
-    const status = await dao.updateUser(id, { firstName: newFirstName });
-    res.json(status);
-  };
+  // const updateFirstName = async (req, res) => {
+  //   const id = req.params.id;
+  //   const newFirstName = req.params.newFirstName;
+  //   const status = await dao.updateUser(id, { firstName: newFirstName });
+  //   res.json(status);
+  // };
   const deleteUser = async (req, res) => {
     const id = req.params.id;
     const status = await dao.deleteUser(id);
@@ -102,7 +102,7 @@ function UserRoutes(app) {
   app.post("/api/users/signup", signup);
 
   app.delete("/api/users/:id", deleteUser);
-  app.get("/api/users/updateFirstName/:id/:newFirstName", updateFirstName);
+  // app.get("/api/users/updateFirstName/:id/:newFirstName", updateFirstName);
   app.get("/api/users/:username/:password/:email/:role", createUser);
   app.get("/api/users/role/:role", findUsersByRole);
   app.get("/api/users", findAllUsers);

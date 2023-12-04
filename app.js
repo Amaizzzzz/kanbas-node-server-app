@@ -14,7 +14,13 @@ import FollowsRoutes from "./follows/routes.js";
 import SectionRoutes from "./sections/routes.js";
 import cors from "cors";
 
-mongoose.connect("mongodb://127.0.0.1:27017/kanbas-cs5610-fa23");
+// Setup MongoDB connection
+mongoose.connect("mongodb://127.0.0.1:27017/project", { useNewUrlParser: true, useUnifiedTopology: true })
+  .catch(err => {
+    console.error('MongoDB connection error:', err.message);
+    process.exit(1);
+  });
+
 
 const app = express();
 app.use(
