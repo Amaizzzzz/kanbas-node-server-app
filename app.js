@@ -5,12 +5,21 @@ import mongoose from 'mongoose';
 import "dotenv/config";
 
 // Import routes
-import Hello from "./hello.js";
+import Hello from "./hello.js"
 import Lab5 from "./lab5.js";
 import CourseRoutes from "./courses/routes.js";
 import UserRoutes from "./users/routes.js";
 import ModuleRoutes from "./modules/routes.js";
 import AssignmentRoutes from './assignments/routes.js';
+
+// Ensure required environment variables are set
+const requiredEnv = ['FRONTEND_URL', 'MONGODB_URI'];
+requiredEnv.forEach(envVar => {
+  if (!process.env[envVar]) {
+    console.error(`Missing required environment variable: ${envVar}`);
+    process.exit(1);
+  }
+});
 
 // Setup MongoDB connection
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -21,12 +30,11 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 
 const app = express();
 
-// CORS configuration
-const allowedOrigins = process.env.FRONTEND_URL.split(',');
+const allowedOrigins = ['https://a6--creative-nougat-9b83f1.netlify.app', 'http://localhost:3000'];
 app.use(cors({
   credentials: true,
   origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin.trim())) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
       callback(new Error('Not allowed by CORS'));
@@ -36,19 +44,19 @@ app.use(cors({
 
 // Session configuration
 const sessionOptions = {
-  secret: process.env.SESSION_SECRET,
+  secret: 'keyboard cat',
   resave: false,
   saveUninitialized: false,
-  cookie: { secure: process.env.NODE_ENV === 'production' }
+  cookie: {}
 };
 
-app.use(session(sessionOptions));
-
-// Trust first proxy if in production
 if (process.env.NODE_ENV === 'production') {
-  app.set('trust proxy', 1);
+  app.set('trust proxy', 1); // Trust first proxy
+  sessionOptions.cookie.secure = true; // Serve secure cookies
   sessionOptions.cookie.sameSite = 'none';
 }
+
+app.use(session(sessionOptions));
 
 // Middleware for JSON payload parsing
 app.use(express.json());
@@ -62,7 +70,7 @@ Lab5(app);
 Hello(app);
 
 // Start server
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
