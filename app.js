@@ -1,4 +1,5 @@
 import express from 'express';
+import session from "express-session";
 import cors from "cors";
 import mongoose from 'mongoose';
 import "dotenv/config";
@@ -29,7 +30,7 @@ mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTop
 
 const app = express();
 
-const allowedOrigins = [process.env.FRONTEND_URL, 'http://localhost:3000'];
+const allowedOrigins = ['https://a6--creative-nougat-9b83f1.netlify.app', 'http://localhost:3000'];
 app.use(cors({
   credentials: true,
   origin: (origin, callback) => {
@@ -40,6 +41,22 @@ app.use(cors({
     }
   }
 }));
+
+// Session configuration
+const sessionOptions = {
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {}
+};
+
+if (process.env.NODE_ENV === 'production') {
+  app.set('trust proxy', 1); // Trust first proxy
+  sessionOptions.cookie.secure = true; // Serve secure cookies
+  sessionOptions.cookie.sameSite = 'none';
+}
+
+app.use(session(sessionOptions));
 
 // Middleware for JSON payload parsing
 app.use(express.json());
