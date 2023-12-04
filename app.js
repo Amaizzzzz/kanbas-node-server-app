@@ -1,60 +1,59 @@
-// const express = require("express");
-import session from "express-session";
+import express from 'express';
+import cors from "cors";
+import mongoose from 'mongoose';
 import "dotenv/config";
-import express from "express";
-import EnrollmentRoutes from "./enrollments/routes.js";
-import HelloRoutes from "./hello.js";
+
+// Import routes
+import Hello from "./hello.js"
 import Lab5 from "./lab5.js";
 import CourseRoutes from "./courses/routes.js";
-import ModuleRoutes from "./modules/routes.js";
 import UserRoutes from "./users/routes.js";
-import mongoose from "mongoose";
-import LikesRoutes from "./likes/routes.js";
-import FollowsRoutes from "./follows/routes.js";
-import SectionRoutes from "./sections/routes.js";
-import cors from "cors";
+import ModuleRoutes from "./modules/routes.js";
+import AssignmentRoutes from './assignments/routes.js';
+
+// Ensure required environment variables are set
+const requiredEnv = ['FRONTEND_URL', 'MONGODB_URI'];
+requiredEnv.forEach(envVar => {
+  if (!process.env[envVar]) {
+    console.error(`Missing required environment variable: ${envVar}`);
+    process.exit(1);
+  }
+});
 
 // Setup MongoDB connection
-mongoose.connect("mongodb://127.0.0.1:27017/project", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(err => {
     console.error('MongoDB connection error:', err.message);
     process.exit(1);
   });
 
-
 const app = express();
-app.use(
-  cors({
-    credentials: true,
-    origin: process.env.FRONTEND_URL
-  })
-);
 
-const sessionOptions = {
-  secret: "any string",
-  resave: false,
-  saveUninitialized: false,
-};
-if (process.env.NODE_ENV !== "development") {
-  sessionOptions.proxy = true;
-  sessionOptions.cookie = {
-    sameSite: "none",
-    secure: true,
-  };
-}
-app.use(session(sessionOptions));
+const allowedOrigins = [process.env.FRONTEND_URL, 'http://localhost:3000'];
+app.use(cors({
+  credentials: true,
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
-
+// Middleware for JSON payload parsing
 app.use(express.json());
 
-FollowsRoutes(app);
-LikesRoutes(app);
+// Route setup
 UserRoutes(app);
-ModuleRoutes(app);
 CourseRoutes(app);
+ModuleRoutes(app);
+AssignmentRoutes(app);
 Lab5(app);
-HelloRoutes(app);
-SectionRoutes(app);
-EnrollmentRoutes(app);
+Hello(app);
 
-app.listen(4000);
+// Start server
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
